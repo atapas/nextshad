@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Star } from "lucide-react";
 
 export default async function Home() {
-  const response = await fetch("https://api.github.com/repos/atapas/nextshad");
+  const response = await fetch("https://api.github.com/repos/atapas/nextshad", { cache: 'no-store' });
   const data = await response.json();
   const starGazzersCount = data?.stargazers_count;
 
