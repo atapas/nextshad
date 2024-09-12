@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { Header } from "@/components/common/header";
+import { Footer } from "@/components/common/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,9 +35,10 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Header />
-          <main>
-            {children}
-          </main>
+            <main className="h-[calc(100vh-94px)] overflow-y-auto">
+              {children}
+            </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
